@@ -6,7 +6,6 @@
 		(course_name, course_detail, course_img_title, course_img_detail, course_difficulty, course_start,course_start_detail,course_end,course_end_detail)
 		values(#{courseName}, #{courseDetail}, #{courseImgTitle}, #{courseImgDetail}, #{courseDifficulty}, #{courseStart},#{courseStartDetail},#{courseEnd},#{courseEndDetail})
 	</insert>
-</mapper>
 	
 	<select id="selectCourses" resultType="courseDTO" parameterType="map">
 		select c.course_number,course_name, course_detail, course_img_title, course_img_detail, course_difficulty, course_start,course_start_detail,course_end,course_end_detail,file_name,file_name_original
@@ -31,7 +30,6 @@
 		select course_name, cousre_img_title
 		from tbl_course
 	</select>
-</mapper>
 	<!-- 게시글 전체 개수  -->
 	<select id="getTotal" resultType="_int">
 		select count(course_number) from tbl_course

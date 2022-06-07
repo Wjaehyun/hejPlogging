@@ -1,7 +1,7 @@
 package com.hejPlogging;
 
 import java.io.IOException;
-//�׽�Ʈ
+//�׽�Ʈ
 import java.io.PrintWriter;
 
 import javax.servlet.ServletResponse;
@@ -24,7 +24,7 @@ public class CourseAdd implements Action{
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException{
 		req.setCharacterEncoding("UTF-8");
-		String uploadPath = "C:\\upload";
+		String uploadPath = "C:\\web_1900j_wjh\\jsp\\workspace\\hejPlogging\\WebContent\\upload";
 		int fileSize = 1024 * 1024 * 5; //5M
 		
 		ActionInfo actionInfo = new ActionInfo();
@@ -36,7 +36,7 @@ public class CourseAdd implements Action{
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
 		//courseVO.setCourseNumber(Integer.parseInt(multipartRequest.getParameter("courseNumber")));
-		//�׽�Ʈ
+		//�׽�Ʈ
 		courseVO.setCourseName(multipartRequest.getParameter("courseName"));
 		courseVO.setCourseDetail(multipartRequest.getParameter("courseDetail"));
 		courseVO.setCourseImgTitle(multipartRequest.getParameter("courseImgTitle"));
