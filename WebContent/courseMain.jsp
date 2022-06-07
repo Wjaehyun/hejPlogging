@@ -71,8 +71,7 @@
                   </c:if>
                      <div class="col">
                         <div class="product-img-wrapper">
-                           <a href="${pageContext.request.contextPath }/courseDetail.cs?courseNumber=${course.getCourseNumber()}&page=${page}"><img src="assets/img/course/seongdangmot.png"></a>
-                        	 <c:out value="${course.getFileNameOriginal()}"/>
+                           <a href="${pageContext.request.contextPath }/courseDetail.cs?courseNumber=${course.getCourseNumber()}&page=${page}"><img src="D:\\web_1900_jhs\\jsp\\workspace\\1teamWeb\\WebContent\\upload\\${course.getFileNameOriginal()}"></a>
                         </div>
                         <div class="product-detail">
                            <div class="product-name">

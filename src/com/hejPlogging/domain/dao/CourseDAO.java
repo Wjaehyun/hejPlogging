@@ -18,20 +18,29 @@ public class CourseDAO {
       sqlSession = sqlSessionFactory.openSession(true);
    }
 
-   //ì½”ìŠ¤ db ì¶”ê°€
+   //ÄÚ½º db Ãß°¡
    public void join(CourseVO courseVO) {
-	sqlSession.insert("Course.join", courseVO);
+   sqlSession.insert("Course.join", courseVO);
    }
 
+<<<<<<< HEAD
    //ì½”ìŠ¤ ì „ì²´ ëª©ë¡
    public List<CourseDTO> selectCourses(Map<String, Integer> courseMap){
 	    return sqlSession.selectList("Course.selectCourses",courseMap);
 	}
    //ìµœê·¼ ê²Œì‹œê¸€ ë²ˆí˜¸
+=======
+   //ÄÚ½º ÀüÃ¼ ¸ñ·Ï
+   public List<CourseDTO> selectCourses(Map<String, Integer> courseMap){
+       return sqlSession.selectList("Course.selectCourses",courseMap);
+   }
+   //ÃÖ±Ù °Ô½Ã±Û ¹øÈ£
+>>>>>>> 9175b143820bdb422a4782f59adad45fce3810ab
    public int getSeq() {
-	return sqlSession.selectOne("Course.getSeq");
+   return sqlSession.selectOne("Course.getSeq");
    }
 
+<<<<<<< HEAD
  //ê²Œì‹œê¸€ ì „ì²´ ê°œìˆ˜
    public int getTotal() {
        return sqlSession.selectOne("Course.getTotal");
@@ -40,5 +49,16 @@ public class CourseDAO {
    public CourseVO selectDetail(int courseNumber) {
        return sqlSession.selectOne("Course.selectDetail", courseNumber);
     }    
+=======
+ //°Ô½Ã±Û ÀüÃ¼ °³¼ö
+   public int getTotal() {
+       return sqlSession.selectOne("Course.getTotal");
+   }
+//°Ô½Ã±Û Á¤º¸ Á¶È¸
+   public CourseVO selectDetail(int courseNumber) {
+       return sqlSession.selectOne("Course.selectDetail", courseNumber);
+       }    
+
+>>>>>>> 9175b143820bdb422a4782f59adad45fce3810ab
 }
 

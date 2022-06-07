@@ -15,10 +15,7 @@
 	<link rel="stylesheet" href="assets/css/productSpecific.css">
 </head>
 <body>
-	<c:set var="course" value="${course}"/>
-		 <c:forEach var="course" items="${course}">
-		 	<c:out value="${course.getCourseName()}"/>
-		 </c:forEach>
+	<c:set var="course" value="${courseList}"/>
    	<c:set var="files" value="${files}"/>
    	<c:set var="page" value="${page}"/>
 	<jsp:include page="header.jsp"/>
@@ -37,14 +34,14 @@
 				<div class="product-form-wrapper">
 					<div class="product-form">
 						<div class="product-title-wrapper">
-							<div class="product-title">
-								대구 성당못 코스
-							</div>
+								<div class="product-title">
+		 							<c:out value="${course.getCourseName()}"/>		
+								</div>
 							<a><img src="assets/img/share.png" alt=""></a>
 						</div>
 						<!-- 간단 설명 -->
 						<div class="product-summary">
-							<span>길이 다소 좁긴하나, 갈래길이 많아서 산책하시는 분들 피해서 달리기에 괜찮습니다.</span>
+							<span><c:out value="${course.getCourseDetail()}"/></span>
 						</div>
 					</div>
 				</div>

@@ -34,18 +34,21 @@ public class CourseFrontController extends HttpServlet {
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(true); 
 			actionInfo.setPath(req.getContextPath() + "/.jsp");
-		}  else if(command.equals("mainPage.main")) {
-			actionInfo = new MainShow().execute(req, resp);
-		}else {
-		//	 404 일 때 출력할 에러 페이지 경로 작성
+		}else{
+		//	 404 �씪 �븣 異쒕젰�븷 �뿉�윭 �럹�씠吏� 寃쎈줈 �옉�꽦
 		}
 		
 		if(command.equals("courseMainInfo.cs")) {
 			actionInfo = new CourseMainInfo().execute(req, resp);
 		}else {
-		//	 404 일 때 출력할 에러 페이지 경로 작성
+		//	 404 �씪 �븣 異쒕젰�븷 �뿉�윭 �럹�씠吏� 寃쎈줈 �옉�꽦
 		}
 		
+		if(command.equals("courseDetail.cs")) {
+			actionInfo = new CourseDetail().execute(req, resp);
+		}else {
+		//	 404 �씪 �븣 異쒕젰�븷 �뿉�윭 �럹�씠吏� 寃쎈줈 �옉�꽦
+		}
 		
 		if(actionInfo != null) {
 			if(actionInfo.isRedirect()) {
