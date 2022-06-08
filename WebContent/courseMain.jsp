@@ -66,12 +66,13 @@
             <c:set var="i" value="0" />
             <c:set var="j" value="3" />
             <c:forEach var="course" items="${courseList}">
+            <c:forEach var="image" items="${imageList}" begin="0" end="0">
                   <c:if test="${i%j == 0 }">
                   <div class="row">
                   </c:if>
                      <div class="col">
                         <div class="product-img-wrapper">
-                           <a href="${pageContext.request.contextPath }/courseDetail.cs?courseNumber=${course.getCourseNumber()}&page=${page}"><img src="D:\\web_1900_jhs\\jsp\\workspace\\1teamWeb\\WebContent\\upload\\${course.getFileNameOriginal()}"></a>
+                           <a href="${pageContext.request.contextPath }/courseDetail.cs?courseNumber=${course.getCourseNumber()}&page=${page}"><img src="/upload/${image.getFileNameOriginal()}"></a>
                         </div>
                         <div class="product-detail">
                            <div class="product-name">
@@ -87,6 +88,7 @@
                   </c:if>
                   <c:set var="i" value="${i+1}" />         
             </c:forEach> 
+            </c:forEach>
             <c:set var="page" value="${page}"/>
 			<c:set var="startPage" value="${startPage}"/>
 			<c:set var="endPage" value="${endPage}"/>

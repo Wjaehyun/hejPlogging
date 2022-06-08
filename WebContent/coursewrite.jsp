@@ -12,7 +12,17 @@
 		<form action="${pageContext.request.contextPath}/courseadd.cs" name="joinForm" method="post" enctype="multipart/form-data">
 			<p>
 				<label>
-					코스추가사진 : <input type="file" name="courseFile">
+					코스썸네일사진 : <input type="file" name="courseFile">
+				</label>
+			</p>
+			<p>
+				<label>
+					코스추가사진 : <input type="file" name="courseFile1">
+				</label>
+			</p>
+			<p>
+				<label>
+					코스추가사진 : <input type="file" name="courseFile2">
 				</label>
 			</p>
 			<p>

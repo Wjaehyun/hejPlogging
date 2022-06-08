@@ -27,7 +27,9 @@
 				<!-- 이미지 -->
 				<div class="product-thumbs-wrapper">
 					<div class="holder">
-						<img src="assets/img/course/seongdangmot.png">
+						<c:forEach var="file" items="${files}" begin="0" end="0">
+		                   <img src="/upload/${file.getFileNameOriginal()}">
+	                    </c:forEach>
 					</div>
 				</div>
 				<!-- 코스 설명 -->
@@ -81,12 +83,18 @@
 					<!-- 카카오맵 -->
 					<div class="kakaomap">
 						<div id="map" style="width:100%;height:400px;"></div>
+						<p id="start" style="display:none">
+							<c:out value="${course.getCourseStart()}"/>
+						</p>
+						<p id="end" style="display:none">
+							<c:out value="${course.getCourseEnd()}"/>
+						</p>
 					</div>
 					<h3>코스 설명</h3>
 					<div class="product-img">
-						<p><img src="https://cdn.imweb.me/upload/S20210910ee70c8c01f5c4/6137c8d36258c.png" alt=""></p>
-						<p><img src="https://cdn.imweb.me/upload/S20210910ee70c8c01f5c4/3716a5b01edbe.png" alt=""></p>
-						<p><img src="https://cdn.imweb.me/upload/S20210910ee70c8c01f5c4/4d4154913d817.png" alt=""></p>
+						<c:forEach var="file" items="${files}">
+		                   <img src="/upload/${file.getFileNameOriginal()}">
+	                    </c:forEach>
 					</div>
 				</div>
 			</div>
@@ -94,6 +102,6 @@
 	</section>
 	<jsp:include page="footer.jsp"/>
 </body>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=20e3b5b051ac02058e045e7af4c2ac89"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=90266a5ec90bc57cdea6bcfda8c42652&libraries=services"></script>
 <script type="text/javascript" src="assets/js/courseSpecific.js"></script>
 </html>

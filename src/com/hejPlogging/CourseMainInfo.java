@@ -61,6 +61,7 @@ public class CourseMainInfo implements Action{
 		courseMap.put("rowCount", rowCount);
 		
 		req.setAttribute("courseList", courseDAO.selectCourses(courseMap));
+		req.setAttribute("imageList", courseDAO.selectImage(courseMap));
 		req.setAttribute("page", page);
 		req.setAttribute("startPage", startPage);
 		req.setAttribute("endPage", endPage);

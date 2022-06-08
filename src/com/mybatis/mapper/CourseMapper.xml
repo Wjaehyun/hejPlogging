@@ -8,11 +8,18 @@
 	</insert>
 	
 	<select id="selectCourses" resultType="courseDTO" parameterType="map">
-		select c.course_number,course_name, course_detail, course_img_title, course_img_detail, course_difficulty, course_start,course_start_detail,course_end,course_end_detail,file_name,file_name_original
+		select course_number,course_name, course_detail, course_img_title, course_img_detail, course_difficulty, course_start,course_start_detail,course_end,course_end_detail
+		from tbl_course 
+		order by 1 desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<select id="selectImage" resultType="courseDTO" parameterType="map">
+		select file_name,file_name_original
 		from tbl_course c join tbl_coursefile f
 		on c.course_number = f.course_number
 		order by 1 desc limit #{startRow}, #{rowCount}
 	</select>
+	
 	
 	<select id="selectDetail" resultType="courseVO" parameterType="_int" >
 		select course_number,course_name, course_detail, course_img_title, course_img_detail, course_difficulty, course_start,course_start_detail,course_end,course_end_detail
