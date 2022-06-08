@@ -25,6 +25,7 @@ public class CourseDAO {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    //코스 전체 목록
    public List<CourseDTO> selectCourses(Map<String, Integer> courseMap){
 	    return sqlSession.selectList("Course.selectCourses",courseMap);
@@ -42,17 +43,27 @@ public class CourseDAO {
    public List<CourseDTO> selectCourses(Map<String, Integer> courseMap){
        return sqlSession.selectList("Course.selectCourses",courseMap);
    }
+=======
+   //�ڽ� ��ü ���
+   public List<CourseDTO> selectCourses(Map<String, Integer> courseMap){
+       return sqlSession.selectList("Course.selectCourses",courseMap);
+   }
+>>>>>>> 8cb1d38b69e68638c463e18ca18afb58958ec669
    
    public List<CourseDTO> selectImage(Map<String, Integer> courseMap){
        return sqlSession.selectList("Course.selectImage",courseMap);
    }
    
    //�ֱ� �Խñ� ��ȣ
+<<<<<<< HEAD
+>>>>>>> 8cb1d38b69e68638c463e18ca18afb58958ec669
+=======
 >>>>>>> 8cb1d38b69e68638c463e18ca18afb58958ec669
    public int getSeq() {
    return sqlSession.selectOne("Course.getSeq");
    }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  //게시글 전체 개수
@@ -71,6 +82,12 @@ public class CourseDAO {
    public int getTotal() {
        return sqlSession.selectOne("Course.getTotal");
    }
+=======
+ //�Խñ� ��ü ����
+   public int getTotal() {
+       return sqlSession.selectOne("Course.getTotal");
+   }
+>>>>>>> 8cb1d38b69e68638c463e18ca18afb58958ec669
 //�Խñ� ���� ��ȸ
    public CourseVO selectDetail(int courseNumber) {
        return sqlSession.selectOne("Course.selectDetail", courseNumber);

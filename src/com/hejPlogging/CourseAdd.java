@@ -26,10 +26,14 @@ public class CourseAdd implements Action{
 		req.setCharacterEncoding("UTF-8");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		String uploadPath = "C:\\web_1900j_wjh\\jsp\\workspace\\hejPlogging\\WebContent\\upload";
 =======
 		String uploadPath = "D:\\web_1900_jhs\\jsp\\workspace\\1teamWeb\\WebContent\\upload";
 >>>>>>> 9175b143820bdb422a4782f59adad45fce3810ab
+=======
+		String uploadPath = "C:\\upload";
+>>>>>>> 8cb1d38b69e68638c463e18ca18afb58958ec669
 =======
 		String uploadPath = "C:\\upload";
 >>>>>>> 8cb1d38b69e68638c463e18ca18afb58958ec669
